@@ -1,6 +1,6 @@
-#include "./console/Console.hpp"
-#include "./logger/ConsoleLogger.hpp"
-#include "./logger/BaseLogger.hpp"
+#include "console/Console.hpp"
+#include "Logger/ConsoleLogger.hpp"
+#include "Logger/BaseLogger.hpp"
 #include <memory>
 
 int main(int argc, char* argv[]) {

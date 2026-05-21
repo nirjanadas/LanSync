@@ -5,13 +5,14 @@
 #include <vector>
 #include <string>
 
-#include "../logger/BaseLogger.hpp"
-#include "../logger/ConsoleLogger.hpp"
-#include "../networks/LinuxSockets.hpp"
-#include "../networks/SocketInterfaces.hpp"
-#include "../networks/Server.hpp"
-#include "../networks/Client.hpp"
-#include "../networks/FileInfo.hpp"
+#include "Logger/BaseLogger.hpp"
+#include "Logger/ConsoleLogger.hpp"
+
+#include "networks/LinuxSockets.hpp"
+#include "networks/SocketInterfaces.hpp"
+#include "networks/Server.hpp"
+#include "networks/Client.hpp"
+#include "networks/FileInfo.hpp"
 
 enum Command {
     SEND,
@@ -45,14 +46,13 @@ enum ExitCode {
 "\t--help\n"\
 "\tShow manual."
 
-
 class Console {
 private:
     std::vector<std::string> argv;
     std::shared_ptr<BaseLogger> logger;
 
     static Command define_command(const std::string &text_command);
-    
+
     ExitCode send();
     ExitCode _send();
 
